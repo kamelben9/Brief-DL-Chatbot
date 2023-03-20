@@ -4,7 +4,7 @@ from streamlit_chat import message
 import os 
 from dotenv import load_dotenv
 
-load_dotenv('api_key.env')
+load_dotenv('openai_api_key.env')
 openai.api_key = os.environ.get('API_KEY')
 
 def generate_response(prompt):
@@ -34,9 +34,6 @@ if user_input:
     # Enregistre la réponse
     st.session_state['past'].append(user_input)
     st.session_state['generated'].append(output)
-
-    st.session_state["chat_input"] = ""
-    st.write(input)
 
 if st.session_state['generated']:
     for i in range(len(st.session_state['generated'])-1, -1, -1):

@@ -17,3 +17,40 @@ Plusieurs versions du chatbot sont disponibles, chacune avec une complexité cro
 Pour exécuter n'importe quelle version du chatbot, suivez ces étapes :
 
 1. Clonez le dépôt sur votre machine locale :
+
+```
+git clone https://github.com/username/chatbot.git
+
+```
+2. Installez les dépendances requises :
+
+```
+pip install -r requirements.txt
+```
+
+3. Accédez à la version que vous souhaitez exécuter :
+
+```
+cd chatbot/version-x
+```
+
+4. Exécutez l'application Streamlit :
+
+```
+streamlit run app.py
+```
+
+Remplacez `x` par le numéro de version que vous souhaitez exécuter (par exemple, `streamlit run app.py` pour la version 1).
+
+## Contributeurs
+
+Les contributeurs au projet sont :
+
+- Omar
+- Kevin
+- Kamel
+- Cédric
+
+## Licence
+
+Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus d'informations.

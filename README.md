@@ -1,4 +1,4 @@
-### *--- Ceci est une version temporaire du README.md : il faudra la retravailler et la compléter ---*
+### *Ceci est une version temporaire du README.md : il faudra la retravailler et la compléter*
 
 # Chatbot Conversationnel NLP - Preuve de Concept
 

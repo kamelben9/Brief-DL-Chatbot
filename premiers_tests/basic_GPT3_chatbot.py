@@ -19,8 +19,12 @@ def generate_response(prompt):
     message=completion.choices[0].text
     return message[2:]
 
-st.title("Zoltar GPT-3")
-user_input = st.text_input("Votre message :", key='chat_input')
+v01, v1, v2 = st.tabs(["Version 0.1", "Version 1", "Version 2"])
+
+v01.title("Version 0.1")
+v01.header("Chatbot API OpenAI")
+v01.subheader("*Première version basique*")
+user_input = v01.text_input("Votre message :", key='chat_input')
 
 # Enregistre la discussion
 if 'generated' not in st.session_state:

@@ -1,63 +1,37 @@
-### *Ceci est une version temporaire du README.md : il faudra la retravailler et la compléter*
+Chatbot avec LUIS et Blenderbot
 
-# Chatbot Conversationnel NLP - Preuve de Concept
+Il s'agit d'une application Streamlit qui démontre une implémentation de chatbot en utilisant LUIS et Blenderbot. Le chatbot prend l'entrée utilisateur, l'envoie à LUIS pour prédire l'intention et les entités, et génère une réponse en utilisant Blenderbot. L'historique de conversation est affiché sur la page.
+Pour commencer
 
-Ceci est un projet de preuve de concept pour un chatbot conversationnel qui utilise le traitement du langage naturel (NLP) pour interagir avec les utilisateurs. Le chatbot doit pouvoir répondre aux entrées utilisateur de manière conversationnelle.
+Pour exécuter cette application, vous devrez installer les packages suivants :
 
-## Versions
 
-Le framework Streamlit a été choisi pour ce projet.
-Plusieurs versions du chatbot sont disponibles, chacune avec une complexité croissante. Les versions sont énumérées ci-dessous par ordre de complexité :
 
-1. [Version 1 - API OpenAI](https://github.com/kamelben9/Brief-DL-Chatbot/tree/CBA-81-En-tant-qu-utilisateur-final-je-veux-acces-un-chatbot-basique-sans-memoire-des-messages-passes-utilisant-l-API-d-OpenAI-et-son-modele-GPT-3-text-davinci-003) : application Streamlit basique avec une interface simple, utilisant l'API OpenAI. Comprend un champ de texte pour que les utilisateurs écrivent quelque chose et un champ de chat pour enregistrer les entrées utilisateur et les réponses du bot. L'objet de cette version est d'implémenter un squelette applicatif de base pour la suite.
+streamlit
+transformers
+azure-cognitiveservices-language-luis
+msrest
 
-Notez que pour pouvoir utiliser cette version, il vous faudra créer un fichier 'openai_api_key.env' dans le dossier 'premiers_tests' et y inscrire votre API Key pour OpenAI. Le fichier contiendra ceci (c'est un exemple, la clé n'est pas valable):
+Vous devrez également fournir votre ID d'application LUIS et votre clé d'abonnement dans le code.
 
-```sh
-API_KEY=sk-LEse4vpb7vXaXhHyrTc3lbhJeqxldpfp8bq8mvr13d
-```
 
-2. [Version 2](#)
 
-3. [Version 3](#)
+Comment utiliser
 
-## Comment exécuter
 
-Pour exécuter n'importe quelle version du chatbot, suivez ces étapes :
+Exécutez l'application en tapant "streamlit run app.py" dans la ligne de commande.
+Entrez votre message dans la zone de saisie de texte et appuyez sur Entrée pour envoyer.
+Le chatbot générera une réponse en fonction de votre entrée et l'affichera sur la page.
+L'historique de conversation est également affiché sur la page.
 
-1. Clonez le dépôt sur votre machine locale et placez-vous dans le dossier de la version souhaitée:
+Composants
 
-```sh
-git clone https://github.com/username/chatbot.git
-```
+streamlit : Streamlit est une bibliothèque Python qui vous permet de créer des applications web pour les projets d'apprentissage automatique et de science des données.
+transformers : Transformers est une bibliothèque Python pour les tâches de traitement du langage naturel (NLP), telles que la classification de texte, la réponse aux questions et les agents conversationnels.
+azure-cognitiveservices-language-luis : Il s'agit d'un kit de développement logiciel Python pour le service Azure Language Understanding (LUIS). LUIS est un service de traitement du langage naturel basé sur le cloud qui vous permet de construire des agents conversationnels capables de comprendre une entrée en langage naturel.
+msrest : Il s'agit d'une bibliothèque Python pour travailler avec des API RESTful, comme l'API LUIS.
 
-2. Installez les dépendances requises :
+L'application utilise un modèle Blenderbot pré-entraîné pour générer des réponses. Les objets tokenizer et model sont obtenus à partir de la fonction get_models(). La fonction get_intent() envoie l'entrée utilisateur à LUIS pour prédire l'intention et les entités, et la fonction generate_answer() génère une réponse en utilisant Blenderbot en fonction de l'entrée utilisateur et de l'intention et des entités prédites.
+Crédits
 
-```sh
-pip install -r requirements.txt
-```
-
-3. Accédez à la version que vous souhaitez exécuter :
-
-```sh
-cd chatbot/premiers_tests
-```
-
-4. Exécutez l'application Streamlit :
-
-```sh
-streamlit run basic_GPT3_chatbot.py
-```
-
-## Contributeurs
-
-Les contributeurs au projet sont :
-
-- Omar
-- Kevin
-- Kamel
-- Cédric
-
-## Licence
-
-Ce projet est sous licence MIT. Consultez le fichier [LICENSE](https://opensource.org/license/mit/) pour plus d'informations.
+Tout le crédit reviebnt à l'équipe Cédric Duroisin , Kamel Benfattou , Kévin Matchelink,Omar Sahboun , et nos clients/formateurs Charles et Jéremy.
